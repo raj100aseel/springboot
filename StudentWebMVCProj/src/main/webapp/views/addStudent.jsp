@@ -1,7 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <body>
 	<h3>Student Registration Form</h3>
-	
+	<h4 style="color:green">${msg}</h4>
 	<form:form action="save" modelAttribute="student" method="POST">
 		<table>
 			<tr>
@@ -14,7 +14,8 @@
 			</tr>
 			<tr>
 					<td>Student Gender : </td>
-					<td><form:radiobutton path="studentGender"/></td>
+					<td><form:radiobutton path="studentGender" value="male"/>Male
+					<form:radiobutton path="studentGender" value="female"/>Female</td>
 			</tr>
 			<tr>
 					<td>Course : </td>
@@ -33,5 +34,7 @@
 			</tr>
 		</table>
 	</form:form>
+	
+
 </body>
 	
